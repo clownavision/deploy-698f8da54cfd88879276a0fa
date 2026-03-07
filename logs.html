@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krow's Nest / Logs</title>
+  <link rel="stylesheet" href="logs.css">
+  <link rel="icon" href="images/krowicon.png" type="image/png">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER INSIDE THE CONTAINER -->
+    <header class="site-header">
+      <h1>Krow's Nest</h1>
+    </header>
+
+    <!-- SIDEBAR + MAIN BELOW HEADER -->
+    <div class="layout-row">
+
+<aside class="side-nav">
+  <!-- Clickable toggle that only shows on mobile -->
+  <h2 class="menu-toggle">MENU..</h2>
+  
+  <!-- Wrap the actual nav in a div we can hide/show -->
+  <div class="nav-wrapper">
+    <nav>
+      <a href="index.html" class="jump-link">home</a>
+      <a href="concerts.html" class="jump-link">concerts</a>
+      <a href="cds.html" class="jump-link">collection</a>
+      <a href="art.html" class="jump-link">artwork</a>
+      <a href="#" class="jump-link">logs</a>
+    </nav>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.jump-link').forEach(link => {
+    const letters = link.textContent.split('');
+    link.innerHTML = letters.map((char, i) =>
+      `<span style="animation-delay:${i * 0.1}s">${char}</span>` // staggered delay
+    ).join('');
+  });
+});
+</script> 
+
+<script>
+// Mobile menu toggle — FIXED VERSION
+const menuToggle = document.querySelector('.menu-toggle');
+const navWrapper = document.querySelector('.nav-wrapper');
+
+if (menuToggle && navWrapper) {
+  menuToggle.addEventListener('click', () => {
+    navWrapper.classList.toggle('open');
+  });
+}
+</script>
+
+</aside>
+
+<main class="logs-main">
+
+
+        <article class="log-entry"> <!-- feb 13 -->
+        <img src="images/iconfarts/feb 13, 2026.jpg" alt="" class="log-icon">
+        <div class="log-text">
+          <h2 class="log-title">Balemtimes</h2>
+          <h3 class="log-subtitle">February 13, 2026</h3>
+          <p>ohhh noooo i hope i dont get valentines-ed!!! i'd be sooooo sad... i hope no big strong man takes me out!!! oh noOo00!!!</p>
+        </div>
+      </article>
+
+      <article class="log-entry"> <!-- feb 92 -->
+        <img src="images/iconfarts/feb 9, 2026.jpg" alt="" class="log-icon">
+        <div class="log-text">
+          <h2 class="log-title">Holy shit its bad</h2>
+          <h3 class="log-subtitle">February 9, 2026</h3>
+          <p>hey guys dont go to uni its a scam. jk get bread get boned. jk dont go guys my sanity is BAD im bad its bad. </p>
+        </div>
+      </article>
+
+
+            <article class="log-entry"> <!-- dec 3 -->
+        <img src="images/iconfarts/Dec 3, 2025.jpg" alt="" class="log-icon">
+        <div class="log-text">
+          <h2 class="log-title">Woah old site?</h2>
+          <h3 class="log-subtitle">December 3, 2025</h3>
+          <p>Lowkey kind of sad to retire my old one. I'm linking it here just in case I miss it. 
+            <a href="https://mortifaeria.neocities.org/krow/home" class="old-site-btn" target="_blank" rel="noopener"> old site </a>
+<style>
+.old-site-btn {
+  display: inline-block;
+  padding: 0px 8px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: white;
+  background-color: #4e0931;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  line-height: 1;
+}
+.old-site-btn:hover {
+  background-color: #333;
+}
+</style>
+</p>
+        </div>
+      </article>
+
+
+      <article class="log-entry"> <!-- dec 2 -->
+        <img src="images/iconfarts/Dec 2, 2025.jpg" alt="" class="log-icon">
+        <div class="log-text">
+          <h2 class="log-title">Woah new site?</h2>
+          <h3 class="log-subtitle">December 2, 2025</h3>
+          <p>Sooooo excited to abandon this website when I get bored of it!</p>
+        </div>
+      </article>
+
+      
+        </section>
+
+        <footer class="site-footer">
+        
+        </footer>
+        
+    </main>
+
+    </div>
+
+  </div> <!-- end container -->
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krow's Nest / Artwork</title>
+  <link rel="stylesheet" href="art.css">
+    <link rel="icon" href="images/krowicon.png" type="image/png">
+</head>
+<body>
+
+<div class="container">
+
+  <header class="site-header">
+    <h1>Krow's Nest</h1>
+  </header>
+
+  <div class="layout-row">
+<aside class="side-nav">
+  <!-- Clickable toggle that only shows on mobile -->
+  <h2 class="menu-toggle">MENU..</h2>
+  
+  <!-- Wrap the actual nav in a div we can hide/show -->
+  <div class="nav-wrapper">
+    <nav>
+      <a href="index.html" class="jump-link">home</a>
+      <a href="concerts.html" class="jump-link">concerts</a>
+      <a href="cds.html" class="jump-link">collection</a>
+      <a href="#" class="jump-link">artwork</a>
+      <a href="logs.html" class="jump-link">logs</a>
+    </nav>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.jump-link').forEach(link => {
+    const letters = link.textContent.split('');
+    link.innerHTML = letters.map((char, i) =>
+      `<span style="animation-delay:${i * 0.1}s">${char}</span>` // staggered delay
+    ).join('');
+  });
+});
+</script> 
+
+<script>
+// Mobile menu toggle — FIXED VERSION
+const menuToggle = document.querySelector('.menu-toggle');
+const navWrapper = document.querySelector('.nav-wrapper');
+
+if (menuToggle && navWrapper) {
+  menuToggle.addEventListener('click', () => {
+    navWrapper.classList.toggle('open');
+  });
+}
+</script>
+
+</aside>
+    
+
+<main>
+
+<div class="art-grid">
+
+        <div class="art-card" data-blurb="My tattoo on my own ankle yey!">
+    <div class="art-thumb">
+      <img src="images/art/foottattoo.jpg" alt="Foot Tattoo">
+    </div>
+    <p class="art-title">Foot Flower Tattoo</p>
+  </div>
+
+  
+  <div class="art-card" data-blurb="Made this for my boyfriend with epic awesome sauce PS. I'm geeked. Yes, that is me.">
+    <div class="art-thumb">
+      <img src="images/art/cryptiquenobug.png" alt="Cryptique">
+    </div>
+    <p class="art-title">Cryptique Zine Cover</p>
+  </div>
+
+    <div class="art-card" data-blurb="Yeah I had a field day with this one. Took like 4 hours to wash my hands clean though.">
+    <div class="art-thumb">
+      <img src="images/art/oilfinger.jpg" alt="Oil Painting">
+    </div>
+    <p class="art-title">Oil Finger Painting</p>
+  </div>
+
+  <div class="art-card" data-blurb="I made this AAAAAGES ago. Like maybe 5 years ago. It's alright idk">
+    <div class="art-thumb">
+      <img src="images/art/intimate.jpg" alt="Intimacy Poster">
+    </div>
+    <p class="art-title">Intimacy Poster</p>
+  </div>
+
+    <div class="art-card" data-blurb="My third tattoo on human flesh. Yowie!">
+    <div class="art-thumb">
+      <img src="images/art/dinotat.jpg" alt="Dino Tattoo">
+    </div>
+    <p class="art-title">Dino Tattoo</p>
+  </div>
+
+    <div class="art-card" data-blurb="Just some practice. There is also a bird one of my clients is wanting to get.">
+    <div class="art-thumb">
+      <img src="images/art/koitat.jpg" alt="Koi Tattoo">
+    </div>
+    <p class="art-title">Koi Tattoo Practice (plus birb)</p>
+  </div>
+  <!-- duplicate this card for the rest of your art -->
+
+</div>
+
+
+</main>
+
+  </div> <!-- end layout-row -->
+<footer class="site-footer">
+
+  </footer>  
+
+</div> <!-- end container -->
+
+</body>
+
+<!-- ART POPUP VIEWER - NEW LIGHTBOX STYLE -->
+<div id="art-lightbox" class="lightbox-overlay">
+  <img id="lightbox-img" src="" alt="Enlarged artwork">
+  <div id="lightbox-caption">
+    <h2 id="lightbox-title"></h2>
+    <p id="lightbox-blurb"></p>
+  </div>
+</div>
+
+
+<script>
+// ——— LIGHTBOX WITH CLICK-TO-ZOOM + HOVER PAN ———
+const lightbox = document.getElementById('art-lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+// Open lightbox
+document.querySelectorAll('.art-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const imgSrc = card.querySelector('.art-thumb img').src;
+    const title = card.querySelector('.art-title').innerText;
+    const blurb = card.getAttribute('data-blurb') || '';
+
+    lightboxImg.src = imgSrc;
+    document.getElementById('lightbox-title').innerText = title;
+    document.getElementById('lightbox-blurb').innerText = blurb;
+
+    lightbox.classList.add('active');
+    lightboxImg.classList.remove('zoomed'); // start unzoomed
+  });
+});
+
+// Click image to toggle zoom
+lightboxImg.addEventListener('click', (e) => {
+  e.stopPropagation(); // ← super important: prevents backdrop click from closing
+  lightboxImg.classList.toggle('zoomed');
+});
+
+// Update zoom origin as mouse moves (only when zoomed)
+lightboxImg.addEventListener('mousemove', (e) => {
+  if (!lightboxImg.classList.contains('zoomed')) return;
+
+  const rect = lightboxImg.getBoundingClientRect();
+  const x = ((e.clientX - rect.left) / rect.width) * 100;
+  const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+  lightboxImg.style.setProperty('--mouse-x', x + '%');
+  lightboxImg.style.setProperty('--mouse-y', y + '%');
+});
+
+// Close only when clicking the backdrop (not the image or caption)
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove('active');
+    lightboxImg.classList.remove('zoomed');
+  }
+});
+
+// When opening
+lightbox.classList.add('active');
+document.body.classList.add('lightbox-open');   // ← add this
+
+// When closing
+lightbox.classList.remove('active');
+document.body.classList.remove('lightbox-open'); // ← add this
+</script>
+
+
+</html>

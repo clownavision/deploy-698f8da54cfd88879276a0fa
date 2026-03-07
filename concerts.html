@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krow's Nest / Concerts</title>
+  <link rel="stylesheet" href="concert.css">
+    <link rel="icon" href="images/krowicon.png" type="image/png">
+</head>
+<body>
+
+<div class="container">
+
+  <header class="site-header">
+    <h1>Krow's Nest</h1>
+  </header>
+
+  <div class="layout-row">
+<aside class="side-nav">
+  <!-- Clickable toggle that only shows on mobile -->
+  <h2 class="menu-toggle">MENU..</h2>
+  
+  <!-- Wrap the actual nav in a div we can hide/show -->
+  <div class="nav-wrapper">
+    <nav>
+      <a href="index.html" class="jump-link">home</a>
+      <a href="concerts.html" class="jump-link">concerts</a>
+      <a href="cds.html" class="jump-link">collection</a>
+      <a href="#" class="jump-link">artwork</a>
+      <a href="logs.html" class="jump-link">logs</a>
+    </nav>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.jump-link').forEach(link => {
+    const letters = link.textContent.split('');
+    link.innerHTML = letters.map((char, i) =>
+      `<span style="animation-delay:${i * 0.1}s">${char}</span>` // staggered delay
+    ).join('');
+  });
+});
+</script> 
+
+<script>
+// Mobile menu toggle — FIXED VERSION
+const menuToggle = document.querySelector('.menu-toggle');
+const navWrapper = document.querySelector('.nav-wrapper');
+
+if (menuToggle && navWrapper) {
+  menuToggle.addEventListener('click', () => {
+    navWrapper.classList.toggle('open');
+  });
+}
+</script>
+
+</aside>
+
+
+<main>
+
+  <div class="concert-entry">
+<h2 class="concert-band">Men I Trust</h2>
+<h3 class="concert-tour">Equus Tour / January 17, 2026</h3>
+<div class="concert-notes">
+<p>Good show! Prob the only concert I've been to where I was perfectly content sitting in the balcony. HOWEVER there were two gay lovers sitting in front of me that kept making out. odd. </p>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Lovejoy</h2>
+<h3 class="concert-tour">One Simple Tour / November 4, 2025</h3>
+<div class="concert-notes">
+<p>This was the WORST concert I've ever been to. I don't even want to get into it because I start seething with rage. Just ask me in person to rant about this absolute SHIT-show. FUCK. It sucked so bad. I didn't even want to go.</p>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">GWAR and Helmet</h2>
+<h3 class="concert-tour">The Return of GOR GOR / October 29, 2025</h3>
+<div class="concert-notes">
+<p>God damn this was definitely the scariest pit I've ever been in. I drank so much of blothar's blood. Helmet was unreal and I got a kitty shirt. I'm a slave to my passions.</p>
+<div class="concert-photos">
+<img src="images/concert/gwar1.jpg" alt="GWAR Blood" class="clickable-img">
+<img src="images/concert/gwar2.jpg" alt="GWAR Shirt" class="clickable-img">
+</div>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Matt Maltese</h2>
+<h3 class="concert-tour">Tour For You My Whole Life / October 18, 2025</h3>
+<div class="concert-notes">
+<p>I got there so freaking early. I got RIGHT up to the front and Matt saw me bawling my eyes out. It was awesome.</p>
+<div class="concert-photos">
+<img src="images/concert/matt1.jpg" alt="set" class="clickable-img">
+<img src="images/concert/matt2.png" alt="HIM" class="clickable-img">
+</div>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Viagra Boys</h2>
+<h3 class="concert-tour">Infinite Anxiety Tour / September 11, 2025</h3>
+<div class="concert-notes">
+<p> The opener was fucking insane. It was some riot grrl band called Die Spitz. Got some of their merch. Viagra Boys were weird to watch, but cool i guess.</p>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Deftones</h2>
+<h3 class="concert-tour">North America Tour / August 22, 2025</h3>
+<div class="concert-notes">
+<p>Best concert of my life. Every song was fucking crazy. Went with my best friend and we got there 4 hours early. We didn't have VIP, but we still managed to get baricade. Left near the end to go mosh. Best pit I've been in so far. I got Fred Sablan's pick and got posted to their IG. no biggie. Saw them w/ Phantogram and Barbarians of California.</p>
+<div class="concert-photos">
+<img src="images/concert/deftones1.png" alt="Holy Deftones" class="clickable-img">
+<img src="images/concert/deftones2.png" alt="Chino jesus" class="clickable-img">
+<img src="images/concert/deftones3.jpg" alt="Baricade" class="clickable-img">
+</div>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">The Marías and Julie</h2>
+<h3 class="concert-tour">Submarine Tour (Extended) / July 26, 2025</h3>
+<div class="concert-notes">
+<p>JULIEEEE!!!! Such a good concert. People were kind of annoying though. L crowd.</p>
+<div class="concert-photos">
+<img src="images/concert/julie1.jpg" alt="Holy Deftones" class="clickable-img">
+</div>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Primus, Puscifer, and A Perfect Circle</h2>
+<h3 class="concert-tour">Sessanta 2.0 / June 7, 2025</h3>
+<div class="concert-notes">
+<p>Skipped my grad for this. SOOO freaking worth it. Les Claypool for valedictorian! I made a custom grad cap and gown for the concert.</p>
+<div class="concert-photos">
+<img src="images/concert/primus1" alt="PrimmyHat">
+<img src="images/concert/primus2" alt="PrimmyHat">
+</div>
+</div>
+</div>
+
+
+<div class="concert-entry">
+<h2 class="concert-band">Tyler, The Creator</h2>
+<h3 class="concert-tour">Chromakopia / February 28, 2025</h3>
+<div class="concert-notes">
+<p>Holy fuck, my best friend and I got in line 4 hours early so we could get a good spot. We also had VIP for this one, so thank u bsf for that. We got right up to the front and Tyler threw his cookie at us. We saw him w/ Paris, Texas and Lil Yachty (hotness) so good so good !!</p>
+<div class="concert-photos">
+<img src="images/concert/tyler1.jpg" alt="Tyler up close">
+<img src="images/concert/tyler2.jpg" alt="Concert Photo">
+</div>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Faye Webster</h2>
+<h3 class="concert-tour">Underdressed at the Symphony Tour / September 30, 2024</h3>
+<div class="concert-notes">
+<p>Went with grama!! So good. Her voice is so freaking good wowie. The bassist was also really good in her band.</p>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">PARTYNEXTDOOR</h2>
+<h3 class="concert-tour">SORRY IM OUTSIDE TOUR / July 5, 2024</h3>
+<div class="concert-notes">
+<p>Went with my best friend. It was good!! I do not listen to much PND but I still loved it.</p>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Megadeth</h2>
+<h3 class="concert-tour">Crush The World Tour / April 28, 2024</h3>
+<div class="concert-notes">
+<p>I do NOT like Dave Mustaine. Saw them w/ Bullet for my Valentine and Oni. BFMV was so so good!!</p>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Amon Amarth, Cannibal Corpse, Obituary, and Frozen Soul</h2>
+<h3 class="concert-tour">Metal Crushes All Tour / April 27, 2024</h3>
+<div class="concert-notes">
+<p>Moshed like craaazzyyyyyy. Some guy took a selfie w/ me and posted it on his instagram with the song "Stripped, Raped, and Strangled" by CC. He was like 40. Pretty lit if you ask me.</p>
+<div class="concert-photos">
+<img src="images/concert/cc1.jpg" alt="Selfie">
+<img src="images/concert/cc2.jpg" alt="Selfie 2">
+</div>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Matt Maltese</h2>
+<h3 class="concert-tour">Touring Just to Tour / April 2, 2024</h3>
+<div class="concert-notes">
+<p>Went with my grama and I managed to get like three people from the front. Pretty epic!!</p>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Meshuggah, WhiteChapel, and In Flames</h2>
+<h3 class="concert-tour">North American Tour / November 25, 2023</h3>
+<div class="concert-notes">
+<p>Deadass do not remember this concert at all, but it was Meshuggah so I'm sure it was good. I was NOT in the pit for this one.</p>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Travis Scott</h2>
+<h3 class="concert-tour">Utopia - Circus Maximus Tour / November 10, 2023</h3>
+<div class="concert-notes">
+<p>fein fein fein fein fein fein fein fein</p>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Billy Talent</h2>
+<h3 class="concert-tour">PNE Summer Night Concerts / August 25, 2023</h3>
+<div class="concert-notes">
+<p>No idea how I got pissed on in a pop punk pit... but I guess shit happens?</p>
+</div>
+</div>
+
+<div class="concert-entry">
+<h2 class="concert-band">Tyler, The Creator</h2>
+<h3 class="concert-tour">CMIYGL / April 7, 2022</h3>
+<div class="concert-notes">
+<p>Went with my bestest friend and we got alright seats... we saw him w/ Kali Uchis and Vince Staples !</p>
+</div>
+</div>
+
+<script>
+const imgs = document.querySelectorAll('.concert-photos img');
+const overlay = document.createElement('div');
+overlay.classList.add('lightbox-overlay');
+const overlayImg = document.createElement('img');
+overlay.appendChild(overlayImg);
+document.body.appendChild(overlay);
+
+imgs.forEach(img => {
+  img.addEventListener('click', () => {
+    overlayImg.src = img.src;
+    overlay.classList.add('active');
+  });
+});
+
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('active');
+});
+</script>
+
+
+
+    </main>
+  </div> <!-- end layout-row -->
+<footer class="site-footer">
+  </footer>  
+
+</div> <!-- end container -->
+
+</body>
+</html>

@@ -1,0 +1,2234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krow's Nest / Catalogue</title>
+  <link rel="stylesheet" href="cd.css">
+    <link rel="icon" href="images/krowicon.png" type="image/png">
+</head>
+<body>
+
+<div class="container">
+
+  <header class="site-header">
+    <h1>Krow's Nest</h1>
+  </header>
+
+  <div class="layout-row">
+<aside class="side-nav">
+  <!-- Clickable toggle that only shows on mobile -->
+  <h2 class="menu-toggle">MENU..</h2>
+  
+  <!-- Wrap the actual nav in a div we can hide/show -->
+  <div class="nav-wrapper">
+    <nav>
+      <a href="index.html" class="jump-link">home</a>
+      <a href="concerts.html" class="jump-link">concerts</a>
+      <a href="#" class="jump-link">collection</a>
+      <a href="art.html" class="jump-link">artwork</a>
+      <a href="logs.html" class="jump-link">logs</a>
+    </nav>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.jump-link').forEach(link => {
+    const letters = link.textContent.split('');
+    link.innerHTML = letters.map((char, i) =>
+      `<span style="animation-delay:${i * 0.1}s">${char}</span>` // staggered delay
+    ).join('');
+  });
+});
+</script> 
+
+<script>
+// Mobile menu toggle — FIXED VERSION
+const menuToggle = document.querySelector('.menu-toggle');
+const navWrapper = document.querySelector('.nav-wrapper');
+
+if (menuToggle && navWrapper) {
+  menuToggle.addEventListener('click', () => {
+    navWrapper.classList.toggle('open');
+  });
+}
+</script>
+
+</aside>
+
+<main>
+
+<div class="cd-catalogue-container">
+<h1>Browse My CD Catalogue !</h1>
+
+  <!-- CD Grid -->
+  <div id="cd-grid" class="cd-grid">
+    <!-- Example CD items (repeat for all your albums) -->
+
+    <div class="cd-card" data-number="1" data-artist="Alice in Chains" data-genre="Rock">
+      <div class="cd-cover"><img src="images/album/jar.jpg" alt="Jar of Flies"></div>
+      <div class="cd-info">
+        <p class="cd-album">Jar of Flies</p>
+        <p class="cd-artist">Alice in Chains</p>
+        <p class="cd-number">Page 1</p>
+        <p class="cd-genre">Rock</p>
+      </div>
+    </div>
+
+    <div class="cd-card" data-number="1" data-artist="Barenaked Ladies" data-genre="Rock">
+      <div class="cd-cover"><img src="images/album/stunt.jpg" alt="Stunt"></div>
+      <div class="cd-info">
+        <p class="cd-album">Stunt</p>
+        <p class="cd-artist">Barenaked Ladies</p>
+        <p class="cd-number">Page 1</p>
+        <p class="cd-genre">Rock</p>
+      </div>
+    </div>
+
+    <div class="cd-card" data-number="1" data-artist="Bread" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/bread.jpg" alt="Essentials"></div>
+  <div class="cd-info">
+    <p class="cd-album">Essentials</p>
+    <p class="cd-artist">Bread</p>
+    <p class="cd-number">Page 1</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="1" data-artist="Breaking Benjamin" data-genre="Emo">
+  <div class="cd-cover"><img src="images/album/phobia.jpg" alt="Phobia"></div>
+  <div class="cd-info">
+    <p class="cd-album">Phobia</p>
+    <p class="cd-artist">Breaking Benjamin</p>
+    <p class="cd-number">Page 1</p>
+    <p class="cd-genre">Emo</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="2" data-artist="Counting Crows" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/august.png" alt="August and Everything After"></div>
+  <div class="cd-info">
+    <p class="cd-album">August and Everything After</p>
+    <p class="cd-artist">Counting Crows</p>
+    <p class="cd-number">Page 2</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="2" data-artist="CAKE" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/nugget.jpg" alt="Fashion Nugget"></div>
+  <div class="cd-info">
+    <p class="cd-album">Fashion Nugget</p>
+    <p class="cd-artist">CAKE</p>
+    <p class="cd-number">Page 2</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="2" data-artist="Deftones" data-genre="Metal">
+  <div class="cd-cover"><img src="images/album/deftones.jpg" alt="Deftones"></div>
+  <div class="cd-info">
+    <p class="cd-album">Deftones</p>
+    <p class="cd-artist">Deftones</p>
+    <p class="cd-number">Page 2</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="2" data-artist="Dream Theater" data-genre="Metal">
+  <div class="cd-cover"><img src="images/album/imagesandwords.jpg" alt="Images and Words"></div>
+  <div class="cd-info">
+    <p class="cd-album">Images and Words</p>
+    <p class="cd-artist">Dream Theater</p>
+    <p class="cd-number">Page 2</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="3" data-artist="Erykah Badu" data-genre="R&B">
+  <div class="cd-cover"><img src="images/album/mamasgun.jpg" alt="Mama's Gun"></div>
+  <div class="cd-info">
+    <p class="cd-album">Mama's Gun</p>
+    <p class="cd-artist">Erykah Badu</p>
+    <p class="cd-number">Page 3</p>
+    <p class="cd-genre">R&B</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="3" data-artist="Filter" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/titlerecord.jpg" alt="Title of Album"></div>
+  <div class="cd-info">
+    <p class="cd-album">Title of Album</p>
+    <p class="cd-artist">Filter</p>
+    <p class="cd-number">Page 3</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="3" data-artist="Korn" data-genre="Metal">
+  <div class="cd-cover"><img src="images/album/peachy.jpg" alt="Life is Peachy"></div>
+  <div class="cd-info">
+    <p class="cd-album">Life is Peachy</p>
+    <p class="cd-artist">Korn</p>
+    <p class="cd-number">Page 3</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="3" data-artist="King Crimson" data-genre="Experimental">
+  <div class="cd-cover"><img src="images/album/threepair.png" alt="Three of a Perfect Pair"></div>
+  <div class="cd-info">
+    <p class="cd-album">Three of a Perfect Pair</p>
+    <p class="cd-artist">King Crimson</p>
+    <p class="cd-number">Page 3</p>
+    <p class="cd-genre">Experimental</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="4" data-artist="Lenny Kravitz" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/five.jpg" alt="5"></div>
+  <div class="cd-info">
+    <p class="cd-album">5</p>
+    <p class="cd-artist">Lenny Kravitz</p>
+    <p class="cd-number">Page 4</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="4" data-artist="Lauryn Hill" data-genre="Hip Hop">
+  <div class="cd-cover"><img src="images/album/miseducation.png" alt="The Miseducation of Lauryn Hill"></div>
+  <div class="cd-info">
+    <p class="cd-album">The Miseducation of Lauryn Hill</p>
+    <p class="cd-artist">Lauryn Hill</p>
+    <p class="cd-number">Page 4</p>
+    <p class="cd-genre">Hip Hop</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="4" data-artist="Leonard Cohen" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/roadsongs.jpeg" alt="Songs From The Road"></div>
+  <div class="cd-info">
+    <p class="cd-album">Songs From The Road</p>
+    <p class="cd-artist">Leonard Cohen</p>
+    <p class="cd-number">Page 4</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="4" data-artist="Mick Flannery" data-genre="Folk">
+  <div class="cd-cover"><img src="images/album/goodtime.jpg" alt="Goodtime Charlie"></div>
+  <div class="cd-info">
+    <p class="cd-album">Goodtime Charlie</p>
+    <p class="cd-artist">Mick Flannery</p>
+    <p class="cd-number">Page 4</p>
+    <p class="cd-genre">Folk</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="5" data-artist="Minions Soundtrack" data-genre="Soundtrack">
+  <div class="cd-cover"><img src="images/album/minions.jpg" alt="Soundtrack"></div>
+  <div class="cd-info">
+    <p class="cd-album">Soundtrack</p>
+    <p class="cd-artist">Minions Soundtrack</p>
+    <p class="cd-number">Page 5</p>
+    <p class="cd-genre">Soundtrack</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="5" data-artist="Nirvana" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/unpluggednirv.png" alt="Unplugged in New York"></div>
+  <div class="cd-info">
+    <p class="cd-album">Unplugged in New York</p>
+    <p class="cd-artist">Nirvana</p>
+    <p class="cd-number">Page 5</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="5" data-artist="Pearl Jam" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/vs.jpg" alt="Vs."></div>
+  <div class="cd-info">
+    <p class="cd-album">Vs.</p>
+    <p class="cd-artist">Pearl Jam</p>
+    <p class="cd-number">Page 5</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="5" data-artist="Pixies" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/pixeis.jpg" alt="Best of"></div>
+  <div class="cd-info">
+    <p class="cd-album">Best of</p>
+    <p class="cd-artist">Pixies</p>
+    <p class="cd-number">Page 5</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="6" data-artist="Pink Floyd" data-genre="Experimental">
+  <div class="cd-cover"><img src="images/album/dsotm.jpg" alt="Dark Side of The Moon"></div>
+  <div class="cd-info">
+    <p class="cd-album">Dark Side of The Moon</p>
+    <p class="cd-artist">Pink Floyd</p>
+    <p class="cd-number">Page 6</p>
+    <p class="cd-genre">Experimental</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="6" data-artist="Rod Stewart" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/rodstew.jpg" alt="Unplugged"></div>
+  <div class="cd-info">
+    <p class="cd-album">Unplugged</p>
+    <p class="cd-artist">Rod Stewart</p>
+    <p class="cd-number">Page 6</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="6" data-artist="Radiohead" data-genre="Experimental">
+  <div class="cd-cover"><img src="images/album/amnesiac.png" alt="Amnesiac"></div>
+  <div class="cd-info">
+    <p class="cd-album">Amnesiac</p>
+    <p class="cd-artist">Radiohead</p>
+    <p class="cd-number">Page 6</p>
+    <p class="cd-genre">Experimental</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="6" data-artist="Stone Temple Pilots" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/purple.jpeg" alt="Purple"></div>
+  <div class="cd-info">
+    <p class="cd-album">Purple</p>
+    <p class="cd-artist">Stone Temple Pilots</p>
+    <p class="cd-number">Page 6</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="7" data-artist="Star Wars Soundtrack" data-genre="Soundtrack">
+  <div class="cd-cover"><img src="images/album/starwars.jpg" alt="Star Wars Soundtrack"></div>
+  <div class="cd-info">
+    <p class="cd-album">Soundtrack</p>
+    <p class="cd-artist">Star Wars Soundtrack</p>
+    <p class="cd-number">Page 7</p>
+    <p class="cd-genre">Soundtrack</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="7" data-artist="Smash Mouth" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/fush.jpg" alt="Fush Yu Mang"></div>
+  <div class="cd-info">
+    <p class="cd-album">Fush Yu Mang</p>
+    <p class="cd-artist">Smash Mouth</p>
+    <p class="cd-number">Page 7</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="7" data-artist="Soundgarden" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/louderthan.png" alt="Louder Than Love"></div>
+  <div class="cd-info">
+    <p class="cd-album">Louder Than Love</p>
+    <p class="cd-artist">Soundgarden</p>
+    <p class="cd-number">Page 7</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="7" data-artist="System of a Down" data-genre="Metal">
+  <div class="cd-cover"><img src="images/album/toxicity.jpg" alt="Toxicity"></div>
+  <div class="cd-info">
+    <p class="cd-album">Toxicity</p>
+    <p class="cd-artist">System of a Down</p>
+    <p class="cd-number">Page 7</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="8" data-artist="Tears For Fears" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/elemental.jpg" alt="Elemental"></div>
+  <div class="cd-info">
+    <p class="cd-album">Elemental</p>
+    <p class="cd-artist">Tears For Fears</p>
+    <p class="cd-number">Page 8</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card" data-number="8" data-artist="Van Morrison" data-genre="Rock">
+  <div class="cd-cover"><img src="images/album/moondance.jpg" alt="Moondance"></div>
+  <div class="cd-info">
+    <p class="cd-album">Moondance</p>
+    <p class="cd-artist">Van Morrison</p>
+    <p class="cd-number">Page 8</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+    <div class="cd-card">
+      <div class="cd-cover">
+        <img src="images/album/verve.png" alt="Urban Hymns">
+      </div>
+      <div class="cd-info">
+        <p class="cd-album">Urban Hymns</p>
+        <p class="cd-artist">The Verve</p>
+        <p class="cd-number"> Page 8</p>
+        <p class="cd-genre">Experimental</p>
+      </div>
+    </div>
+
+    <div class="cd-card">
+      <div class="cd-cover">
+        <img src="images/album/melencholy.jpg" alt="My Dear Melancholy">
+      </div>
+      <div class="cd-info">
+        <p class="cd-album">My Dear Melancholy</p>
+        <p class="cd-artist">The Weeknd</p>
+        <p class="cd-number">Page 8</p>
+        <p class="cd-genre">R&B</p>
+      </div>
+    </div>
+
+
+    <div class="cd-card">
+      <div class="cd-cover">
+        <img src="images/album/mommy.jpg" alt="Wedding Playlist">
+      </div>
+      <div class="cd-info">
+        <p class="cd-album">Wedding Playlist</p>
+        <p class="cd-artist">Mom & Dad</p>
+        <p class="cd-number">Page 9</p>
+        <p class="cd-genre">Soundtrack</p>
+      </div>
+    </div>
+
+    <div class="cd-card">
+      <div class="cd-cover">
+        <img src="images/album/dad.jpg" alt="Dad's Playlist">
+      </div>
+      <div class="cd-info">
+        <p class="cd-album">Dad's Playlist</p>
+        <p class="cd-artist">Mom</p>
+        <p class="cd-number">Page 9</p>
+        <p class="cd-genre">Soundtrack</p>
+      </div>
+    </div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/babatiki.jpg" alt="Ba Ba Ti Ki Di Do">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Ba Ba Ti Ki Di Do</p>
+    <p class="cd-artist">Sigur Rós</p>
+    <p class="cd-number">Page 9</p>
+    <p class="cd-genre">Experimental</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/1989.png" alt="1989">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">1989</p>
+    <p class="cd-artist">Taylor Swift</p>
+    <p class="cd-number">Page 9</p>
+    <p class="cd-genre">Pop</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/austin1.jpg" alt="Austin Powers Soundtrack">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Soundtrack</p>
+    <p class="cd-artist">Austin Powers Soundtrack</p>
+    <p class="cd-number">Page 10</p>
+    <p class="cd-genre">Soundtrack</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/billy1.jpg" alt="Billy Talent I">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">I</p>
+    <p class="cd-artist">Billy Talent</p>
+    <p class="cd-number">Page 10</p>
+    <p class="cd-genre">Punk</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/billy2.jpg" alt="Billy Talent II">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">II</p>
+    <p class="cd-artist">Billy Talent</p>
+    <p class="cd-number">Page 10</p>
+    <p class="cd-genre">Punk</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/makeself.jpg" alt="Make Yourself">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Make Yourself</p>
+    <p class="cd-artist">Incubus</p>
+    <p class="cd-number">Page 10</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/pablo.jpg" alt="Pablo Honey">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Pablo Honey</p>
+    <p class="cd-artist">Radiohead</p>
+    <p class="cd-number">Page 11</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/ten.jpg" alt="Ten">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Ten</p>
+    <p class="cd-artist">Pearl Jam</p>
+    <p class="cd-number">Page 11</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/farbeyond.jpg" alt="Far Beyond Driven">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Far Beyond Driven</p>
+    <p class="cd-artist">Pantera</p>
+    <p class="cd-number">Page 11</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/sunday.jpg" alt="Black Sunday">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Black Sunday</p>
+    <p class="cd-artist">Cypress Hill</p>
+    <p class="cd-number">Page 11</p>
+    <p class="cd-genre">Hip Hop</p>
+  </div>
+</div>
+
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/discovery.png" alt="Discovery">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Discovery</p>
+    <p class="cd-artist">Daft Punk</p>
+    <p class="cd-number">Page 12</p>
+    <p class="cd-genre">EDM</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/twisted.jpg" alt="Twisted Sister Best Of">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Best of</p>
+    <p class="cd-artist">Twisted Sister</p>
+    <p class="cd-number">Page 12</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/empire.png" alt="Evil Empire">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Evil Empire</p>
+    <p class="cd-artist">RATM</p>
+    <p class="cd-number">Page 12</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/ratm.jpg" alt="RATM">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">RATM</p>
+    <p class="cd-artist">RATM</p>
+    <p class="cd-number">Page 12</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/cash.jpg" alt="Hall of Fame">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Hall of Fame</p>
+    <p class="cd-artist">Johnny Cash</p>
+    <p class="cd-number">Page 13</p>
+    <p class="cd-genre">Country</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/foo.jpg" alt="Nothing Left To Lose">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Nothing Left To Lose</p>
+    <p class="cd-artist">Foo Fighters</p>
+    <p class="cd-number">Page 13</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/yield.png" alt="Yield">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Yield</p>
+    <p class="cd-artist">Pearl Jam</p>
+    <p class="cd-number">Page 13</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/greyest.jpeg" alt="The Greyest Of Blue Skies">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Greyest Of Blue Skies</p>
+    <p class="cd-artist">Finger Eleven</p>
+    <p class="cd-number">Page 13</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/faith.png" alt="Faith and Devotion">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Faith and Devotion</p>
+    <p class="cd-artist">Depeche Mode</p>
+    <p class="cd-number">Page 14</p>
+    <p class="cd-genre">Goth</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/violator.png" alt="Depeche Mode">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Violator</p>
+    <p class="cd-artist">Depeche Mode</p>
+    <p class="cd-number">Page 14</p>
+    <p class="cd-genre">Goth</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/ultra.png" alt="Ultra">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Ultra</p>
+    <p class="cd-artist">Depeche Mode</p>
+    <p class="cd-number">Page 14</p>
+    <p class="cd-genre">Goth</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/exciter.png" alt="Exciter">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Exciter</p>
+    <p class="cd-artist">Depeche Mode</p>
+    <p class="cd-number">Page 14</p>
+    <p class="cd-genre">Goth</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/load.jpg" alt="Load">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Load</p>
+    <p class="cd-artist">Metallica</p>
+    <p class="cd-number">Page 15</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/puppets.jpg" alt="Master of Puppets">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Master of Puppets</p>
+    <p class="cd-artist">Metallica</p>
+    <p class="cd-number">Page 15</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/risk.jpg" alt="Risk">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Risk</p>
+    <p class="cd-artist">Megadeth</p>
+    <p class="cd-number">Page 15</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/austin1.jpg" alt="Austin Powers 2">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Soundtrack</p>
+    <p class="cd-artist">Austin Powers 2</p>
+    <p class="cd-number">Page 15</p>
+    <p class="cd-genre">Soundtrack</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/nocode.jpg" alt="No Code">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">No Code</p>
+    <p class="cd-artist">Pearl Jam</p>
+    <p class="cd-number">Page 16</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/sehnsucht.jpg" alt="Sehnsucht">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Sehnsucht</p>
+    <p class="cd-artist">Rammstein</p>
+    <p class="cd-number">Page 16</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/downward.png" alt="The Downward Spiral">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Downward Spiral</p>
+    <p class="cd-artist">NIN</p>
+    <p class="cd-number">Page 16</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/downward.png" alt="The Downward Spiral (disc 2)">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Downward Spiral (disc 2)</p>
+    <p class="cd-artist">NIN</p>
+    <p class="cd-number">Page 16</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/wicked.jpg" alt="No Rest For The Wicked">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">No Rest For The Wicked</p>
+    <p class="cd-artist">Ozzy Osbourne</p>
+    <p class="cd-number">Page 17</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/blizzard.jpg" alt="Blizzard of Ozz">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Blizzard of Ozz</p>
+    <p class="cd-artist">Ozzy Osbourne</p>
+    <p class="cd-number">Page 17</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/tears.jpg" alt="No More Tears">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">No More Tears</p>
+    <p class="cd-artist">Ozzy Osbourne</p>
+    <p class="cd-number">Page 17</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/paranoid.jpg" alt="Paranoid">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Paranoid</p>
+    <p class="cd-artist">Black Sabbath</p>
+    <p class="cd-number">Page 17</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/duran.png" alt="Duran Duran">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Duran Duran</p>
+    <p class="cd-artist">Duran Duran</p>
+    <p class="cd-number">Page 18</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/picture.png" alt="Picture Book">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Picture Book</p>
+    <p class="cd-artist">Simply Red</p>
+    <p class="cd-number">Page 18</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/automatic.jpg" alt="Automatic For The People">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Automatic For The People</p>
+    <p class="cd-artist">R.E.M.</p>
+    <p class="cd-number">Page 18</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/cheech.jpg" alt="Cheech & Chong Best Of">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Best of</p>
+    <p class="cd-artist">Cheech & Chong</p>
+    <p class="cd-number">Page 18</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/doors.jpg" alt="The Doors">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Doors</p>
+    <p class="cd-artist">The Doors</p>
+    <p class="cd-number">Page 19</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/rumours.png" alt="Rumours">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Rumours</p>
+    <p class="cd-artist">Fleetwood Mac</p>
+    <p class="cd-number">Page 19</p>
+    <p class="cd-genre">Folk</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/ccr.jpg" alt="Best of">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Best of</p>
+    <p class="cd-artist">CCR</p>
+    <p class="cd-number">Page 19</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/ccr.jpg" alt="Best of (disc 2)">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Best of (disc 2)</p>
+    <p class="cd-artist">CCR</p>
+    <p class="cd-number">Page 19</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/2pac.jpg" alt="Hits">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Hits</p>
+    <p class="cd-artist">2Pac</p>
+    <p class="cd-number">Page 20</p>
+    <p class="cd-genre">Rap</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/2001.jpg" alt="2001">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">2001</p>
+    <p class="cd-artist">Dr. Dre</p>
+    <p class="cd-number">Page 20</p>
+    <p class="cd-genre">Rap</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/boxxx.jpg" alt="Speakerboxxx">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Speakerboxxx</p>
+    <p class="cd-artist">Outkast</p>
+    <p class="cd-number">Page 20</p>
+    <p class="cd-genre">Rap</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/lovebelow.jpg" alt="The Love Below">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Love Below</p>
+    <p class="cd-artist">Outkast</p>
+    <p class="cd-number">Page 20</p>
+    <p class="cd-genre">Rap</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/disaster.jpg" alt="When Disaster Strikes">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">When Disaster Strikes</p>
+    <p class="cd-artist">Busta Rhymes</p>
+    <p class="cd-number">Page 21</p>
+    <p class="cd-genre">Rap</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/californ.jpg" alt="Californication">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Californication</p>
+    <p class="cd-artist">RHCP</p>
+    <p class="cd-number">Page 21</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/sold.jpg" alt="Da Game Is To Be Sold, Not To Be Told">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Da Game Is To Be Sold, Not To Be Told</p>
+    <p class="cd-artist">Snoop Dogg</p>
+    <p class="cd-number">Page 21</p>
+    <p class="cd-genre">Rap</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/illusion2.jpg" alt="Use Your Illusion II">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Use Your Illusion II</p>
+    <p class="cd-artist">Guns N’ Roses</p>
+    <p class="cd-number">Page 21</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/wall.jpg" alt="The Wall">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Wall</p>
+    <p class="cd-artist">Pink Floyd</p>
+    <p class="cd-number">Page 22</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/wall.jpg" alt="The Wall (disc 2)">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Wall (disc 2)</p>
+    <p class="cd-artist">Pink Floyd</p>
+    <p class="cd-number">Page 22</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/meddle.jpeg" alt="Meddle">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Meddle</p>
+    <p class="cd-artist">Pink Floyd</p>
+    <p class="cd-number">Page 22</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/momentary.jpg" alt="A Momentary Lapse Of Reason">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">A Momentary Lapse Of Reason</p>
+    <p class="cd-artist">Pink Floyd</p>
+    <p class="cd-number">Page 22</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/saucer.jpg" alt="A Saucerful Of Secrets">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">A Saucerful Of Secrets</p>
+    <p class="cd-artist">Pink Floyd</p>
+    <p class="cd-number">Page 23</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/kida.jpg" alt="Kid A">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Kid A</p>
+    <p class="cd-artist">Radiohead</p>
+    <p class="cd-number">Page 23</p>
+    <p class="cd-genre">Experimental</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/clumsy.jpg" alt="Clumsy">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Clumsy</p>
+    <p class="cd-artist">Our Lady Peace</p>
+    <p class="cd-number">Page 23</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/upside.jpg" alt="Down On The Upside">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Down On The Upside</p>
+    <p class="cd-artist">Soundgarden</p>
+    <p class="cd-number">Page 23</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/queenhits.png" alt="Queen Hits">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Queen Hits</p>
+    <p class="cd-artist">Queen</p>
+    <p class="cd-number">Page 24</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/madeinheaven.jpg" alt="Made in Heaven">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Made in Heaven</p>
+    <p class="cd-artist">Queen</p>
+    <p class="cd-number">Page 24</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/earthling.jpg" alt="Earthling">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Earthling</p>
+    <p class="cd-artist">David Bowie</p>
+    <p class="cd-number">Page 24</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/brothers.jpg" alt="Brothers In Arms">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Brothers In Arms</p>
+    <p class="cd-artist">Dire Straits</p>
+    <p class="cd-number">Page 24</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/parklife.jpg" alt="Parklife">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Parklife</p>
+    <p class="cd-artist">Blur</p>
+    <p class="cd-number">Page 25</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/starfish.jpg" alt="Chocolate Starfish and the Hot Dog Flavored Water">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Chocolate Starfish and the Hot Dog Flavored Water</p>
+    <p class="cd-artist">Limp Bizkit</p>
+    <p class="cd-number">Page 25</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/dookie.jpg" alt="Dookie">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Dookie</p>
+    <p class="cd-artist">Green Day</p>
+    <p class="cd-number">Page 25</p>
+    <p class="cd-genre">Punk</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/hybrid.jpg" alt="Hybrid Theory">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Hybrid Theory</p>
+    <p class="cd-artist">Linkin Park</p>
+    <p class="cd-number">Page 25</p>
+    <p class="cd-genre">Emo</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/undertow.jpg" alt="Undertow">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Undertow</p>
+    <p class="cd-artist">TOOL</p>
+    <p class="cd-number">Page 26</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/lateralus.jpg" alt="Lateralus">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Lateralus</p>
+    <p class="cd-artist">TOOL</p>
+    <p class="cd-number">Page 26</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/cycle.jpg" alt="Break The Cycle">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Break The Cycle</p>
+    <p class="cd-artist">Staind</p>
+    <p class="cd-number">Page 26</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/emotive.jpg" alt="Emotive">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Emotive</p>
+    <p class="cd-artist">A Perfect Circle</p>
+    <p class="cd-number">Page 26</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/frogstomp.jpg" alt="Frogstomp">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Frogstomp</p>
+    <p class="cd-artist">Silverchair</p>
+    <p class="cd-number">Page 27</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/beavis.jpg" alt="The Beavis And Butt-Head Experience">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Beavis And Butt-Head Experience</p>
+    <p class="cd-artist">Beavis and Butt-Head</p>
+    <p class="cd-number">Page 27</p>
+    <p class="cd-genre">Soundtrack</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/nevermind.jpg" alt="Nevermind">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Nevermind</p>
+    <p class="cd-artist">Nirvana</p>
+    <p class="cd-number">Page 27</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/nine.jpg" alt="Nine Lives">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Nine Lives</p>
+    <p class="cd-artist">Aerosmith</p>
+    <p class="cd-number">Page 27</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/maclean.jpg" alt="Classics">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Classics</p>
+    <p class="cd-artist">Don McLean</p>
+    <p class="cd-number">Page 28</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/henhouse.jpg" alt="Trouble At The Henhouse">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Trouble At The Henhouse</p>
+    <p class="cd-artist">The Tragically Hip</p>
+    <p class="cd-number">Page 28</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/leader.jpg" alt="Follow The Leader">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Follow The Leader</p>
+    <p class="cd-artist">Korn</p>
+    <p class="cd-number">Page 28</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/issues.png" alt="Issues">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Issues</p>
+    <p class="cd-artist">Korn</p>
+    <p class="cd-number">Page 28</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/science.jpg" alt="S.C.I.E.N.C.E.">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">S.C.I.E.N.C.E.</p>
+    <p class="cd-artist">Incubus</p>
+    <p class="cd-number">Page 29</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/ghost.jpg" alt="Ghost Reveries">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Ghost Reveries</p>
+    <p class="cd-artist">Opeth</p>
+    <p class="cd-number">Page 29</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/wp.jpg" alt="White Pony">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">White Pony</p>
+    <p class="cd-artist">Deftones</p>
+    <p class="cd-number">Page 29</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/trendkill.jpg" alt="The Great Southern Trendkill">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Great Southern Trendkill</p>
+    <p class="cd-artist">Pantera</p>
+    <p class="cd-number">Page 29</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/driving.jpg" alt="Driving Just To Drive">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Driving Just To Drive</p>
+    <p class="cd-artist">Matt Maltese</p>
+    <p class="cd-number">Page 30</p>
+    <p class="cd-genre">Pop</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/shortbus.jpg" alt="Short Bus">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Short Bus</p>
+    <p class="cd-artist">Filter</p>
+    <p class="cd-number">Page 30</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/comfort.jpg" alt="Comfort Eagle">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Comfort Eagle</p>
+    <p class="cd-artist">CAKE</p>
+    <p class="cd-number">Page 30</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/gorillaz.jpg" alt="Gorillaz">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Gorillaz</p>
+    <p class="cd-artist">Gorillaz</p>
+    <p class="cd-number">Page 30</p>
+    <p class="cd-genre">Hip Hop</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/bloody1.jpg" alt="Bloody Kisses">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Bloody Kisses</p>
+    <p class="cd-artist">Type O Negative</p>
+    <p class="cd-number">Page 31</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/bloody2.jpg" alt="Bloody Kisses (disc 2)">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Bloody Kisses (disc 2)</p>
+    <p class="cd-artist">Type O Negative</p>
+    <p class="cd-number">Page 31</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/killing.jpg" alt="Life Is Killing Me">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Life Is Killing Me</p>
+    <p class="cd-artist">Type O Negative</p>
+    <p class="cd-number">Page 31</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/killing.jpg" alt="Life Is Killing Me (disc 2)">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Life Is Killing Me (disc 2)</p>
+    <p class="cd-artist">Type O Negative</p>
+    <p class="cd-number">Page 31</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/betty.jpg" alt="Betty">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Betty</p>
+    <p class="cd-artist">Helmet</p>
+    <p class="cd-number">Page 32</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/baduizm.png" alt="Baduizm">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Baduizm</p>
+    <p class="cd-artist">Erykah Badu</p>
+    <p class="cd-number">Page 32</p>
+    <p class="cd-genre">R&B</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/violator.png" alt="Violator">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Violator</p>
+    <p class="cd-artist">Depeche Mode</p>
+    <p class="cd-number">Page 32</p>
+    <p class="cd-genre">Goth</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/hypnotize.jpg" alt="Hypnotize">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Hypnotize</p>
+    <p class="cd-artist">System Of A Down</p>
+    <p class="cd-number">Page 32</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/milenko.jpg" alt="The Great Milenko">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Great Milenko</p>
+    <p class="cd-artist">ICP</p>
+    <p class="cd-number">Page 33</p>
+    <p class="cd-genre">Hip Hop</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/bends.png" alt="The Bends">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Bends</p>
+    <p class="cd-artist">Radiohead</p>
+    <p class="cd-number">Page 33</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/mezmerize.jpg" alt="Mezmerize">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Mezmerize</p>
+    <p class="cd-artist">System Of A Down</p>
+    <p class="cd-number">Page 33</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/hail.png" alt="Hail to the Thief">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Hail to the Thief</p>
+    <p class="cd-artist">Radiohead</p>
+    <p class="cd-number">Page 33</p>
+    <p class="cd-genre">Experimental</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/bombs.jpg" alt="Louder Than Bombs">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Louder Than Bombs</p>
+    <p class="cd-artist">The Smiths</p>
+    <p class="cd-number">Page 34</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/core.jpg" alt="Core">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Core</p>
+    <p class="cd-artist">Stone Temple Pilots</p>
+    <p class="cd-number">Page 34</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/korn.jpg" alt="Korn">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Korn</p>
+    <p class="cd-artist">Korn</p>
+    <p class="cd-number">Page 34</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/thinktank.jpg" alt="Think Tank">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Think Tank</p>
+    <p class="cd-artist">Blur</p>
+    <p class="cd-number">Page 34</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/rainbows.png" alt="In Rainbows">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">In Rainbows</p>
+    <p class="cd-artist">Radiohead</p>
+    <p class="cd-number">Page 35</p>
+    <p class="cd-genre">Experimental</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/amsp.png" alt="A Moon Shaped Pool">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">A Moon Shaped Pool</p>
+    <p class="cd-artist">Radiohead</p>
+    <p class="cd-number">Page 35</p>
+    <p class="cd-genre">Experimental</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/cavalcade.jpg" alt="Cavalcade">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Cavalcade</p>
+    <p class="cd-artist">black midi</p>
+    <p class="cd-number">Page 35</p>
+    <p class="cd-genre">Experimental</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/deadmans.jpg" alt="Dead Man’s Party">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Dead Man’s Party</p>
+    <p class="cd-artist">Oingo Boingo</p>
+    <p class="cd-number">Page 35</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/snw.jpg" alt="Saturday Night Wrist">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Saturday Night Wrist</p>
+    <p class="cd-artist">Deftones</p>
+    <p class="cd-number">Page 36</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/jazz.jpg" alt="Misc. Jazz">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Misc. Jazz</p>
+    <p class="cd-artist">Jazz</p>
+    <p class="cd-number">Page 36</p>
+    <p class="cd-genre">Jazz</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/creed.jpg" alt="??? idk prob creed or smthn">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">??? idk prob creed or smthn</p>
+    <p class="cd-artist">???</p>
+    <p class="cd-number">Page 36</p>
+    <p class="cd-genre">Soundtrack</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/october.jpg" alt="October Rust">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">October Rust</p>
+    <p class="cd-artist">Type O Negative</p>
+    <p class="cd-number">Page 36</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/bestton.jpg" alt="Best Of">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Best Of</p>
+    <p class="cd-artist">Type O Negative</p>
+    <p class="cd-number">Page 37</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/comingdown.jpg" alt="World Coming Down">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">World Coming Down</p>
+    <p class="cd-artist">Type O Negative</p>
+    <p class="cd-number">Page 37</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/superunknown.png" alt="Superunknown">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Superunknown</p>
+    <p class="cd-artist">Soundgarden</p>
+    <p class="cd-number">Page 37</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/ethyl.jpg" alt="Remembering Ethyl">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Remembering Ethyl</p>
+    <p class="cd-artist">Chronic Fuel</p>
+    <p class="cd-number">Page 37</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/trouble.png" alt="Trouble">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Trouble</p>
+    <p class="cd-artist">Ray LaMontagne</p>
+    <p class="cd-number">Page 38</p>
+    <p class="cd-genre">Folk</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/gorillazsingles.png" alt="Singles">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Singles</p>
+    <p class="cd-artist">Gorillaz</p>
+    <p class="cd-number">Page 38</p>
+    <p class="cd-genre">Hip Hop</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/zingers.jpg" alt="They Can't All Be Zingers">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">They Can't All Be Zingers</p>
+    <p class="cd-artist">Primus</p>
+    <p class="cd-number">Page 38</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/portishead.png" alt="Portishead">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Portishead</p>
+    <p class="cd-artist">Portishead</p>
+    <p class="cd-number">Page 38</p>
+    <p class="cd-genre">Experimental</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/feces.jpg" alt="The Origin of the Feces">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Origin of the Feces</p>
+    <p class="cd-artist">Type O Negative</p>
+    <p class="cd-number">Page 39</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/mirror.jpg" alt="Take a Look in the Mirror">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Take a Look in the Mirror</p>
+    <p class="cd-artist">Korn</p>
+    <p class="cd-number">Page 39</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/mcatis.jpg" alt="Mellon Collie and the Infinite Sadness">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Mellon Collie and the Infinite Sadness</p>
+    <p class="cd-artist">The Smashing Pumpkins</p>
+    <p class="cd-number">Page 39</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/tfs.png" alt="idk i stole this TFS Trivia">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">idk i stole this TFS Trivia</p>
+    <p class="cd-artist">???</p>
+    <p class="cd-number">Page 39</p>
+    <p class="cd-genre">Soundtrack</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/levi.jpg" alt="Leviathan">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Leviathan</p>
+    <p class="cd-artist">Mastodon</p>
+    <p class="cd-number">Page 40</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/degrade.jpg" alt="Degradation Trip">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Degradation Trip</p>
+    <p class="cd-artist">Jerry Cantrell</p>
+    <p class="cd-number">Page 40</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/fur.jpg" alt="Around the Fur">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Around the Fur</p>
+    <p class="cd-artist">Deftones</p>
+    <p class="cd-number">Page 40</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/circus.jpg" alt="Circus">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Circus</p>
+    <p class="cd-artist">Lenny Kravitz</p>
+    <p class="cd-number">Page 40</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/merdenoms.jpg" alt="Mer de Noms">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Mer de Noms</p>
+    <p class="cd-artist">A Perfect Circle</p>
+    <p class="cd-number">Page 41</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/graduation.jpg" alt="Graduation">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Graduation</p>
+    <p class="cd-artist">Kanye West</p>
+    <p class="cd-number">Page 41</p>
+    <p class="cd-genre">Rap</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/hellbilly.jpg" alt="Hellbilly Deluxe">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Hellbilly Deluxe</p>
+    <p class="cd-artist">Rob Zombie</p>
+    <p class="cd-number">Page 41</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/reval.jpg" alt="Revelations">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Revelations</p>
+    <p class="cd-artist">Audioslave</p>
+    <p class="cd-number">Page 41</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/slaves.jpg" alt="Inches from the Mainline">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Inches from the Mainline</p>
+    <p class="cd-artist">Slaves on Dope</p>
+    <p class="cd-number">Page 42</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/facelift.jpg" alt="Facelift">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Facelift</p>
+    <p class="cd-artist">Alice in Chains</p>
+    <p class="cd-number">Page 42</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/skidro.jpg" alt="Slave To The Grind">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Slave To The Grind</p>
+    <p class="cd-artist">Skid Row</p>
+    <p class="cd-number">Page 42</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/aenima.jpg" alt="Ænima">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Ænima</p>
+    <p class="cd-artist">Tool</p>
+    <p class="cd-number">Page 43</p>
+    <p class="cd-genre">Metal</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/primmychoco.jpg" alt="Willy Wonka Chocolate Factory OST">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Willy Wonka & the Chocolate Factory OST</p>
+    <p class="cd-artist">Primus</p>
+    <p class="cd-number">Page 43</p>
+    <p class="cd-genre">Bro idk</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/antipop.jpg" alt="The Antipop">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">The Antipop</p>
+    <p class="cd-artist">Primus</p>
+    <p class="cd-number">Page 43</p>
+    <p class="cd-genre">Idfk</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/above.jpg" alt="Above">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Above</p>
+    <p class="cd-artist">Mad Season</p>
+    <p class="cd-number">Page 43</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/tcv.jpg" alt="Them Crooked Vultures">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Them Crooked Vultures</p>
+    <p class="cd-artist">Them Crooked Vultures</p>
+    <p class="cd-number">Page 44</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/valley.jpg" alt="Welcome to Sky Valley">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Welcome to Sky Valley</p>
+    <p class="cd-artist">Kyuss</p>
+    <p class="cd-number">Page 44</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/hendrix.jpg" alt="Are You Experienced?">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Are You Experienced?</p>
+    <p class="cd-artist">Jimi Hendrix</p>
+    <p class="cd-number">Page 44</p>
+    <p class="cd-genre">Rock</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/carlin.jpg" alt="Jammin' in NY">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">Jammin' in NY</p>
+    <p class="cd-artist">George Carlin</p>
+    <p class="cd-number">Page 45</p>
+    <p class="cd-genre">Comedy</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/carlin.jpg" alt="MISC">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">MISC</p>
+    <p class="cd-artist">George Carlin</p>
+    <p class="cd-number">Page 45</p>
+    <p class="cd-genre">Comedy</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/carlin.jpg" alt="New Jersey">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">New Jersey</p>
+    <p class="cd-artist">George Carlin</p>
+    <p class="cd-number">Page 45</p>
+    <p class="cd-genre">Comedy</p>
+  </div>
+</div>
+
+<div class="cd-card">
+  <div class="cd-cover">
+    <img src="images/album/carlin.jpg" alt="MISC">
+  </div>
+  <div class="cd-info">
+    <p class="cd-album">MISC</p>
+    <p class="cd-artist">George Carlin</p>
+    <p class="cd-number">Page 45</p>
+    <p class="cd-genre">Comedy</p>
+  </div>
+</div>
+
+  
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cdContainer = document.getElementById("cd-grid");
+  const cdCards = Array.from(cdContainer.querySelectorAll(".cd-card"));
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+  const pageNumberDisplay = document.getElementById("page-number");
+
+  // 8 on mobile, 20 on desktop
+  const cardsPerPage = (window.innerWidth <= 880) ? 8 : 20;
+
+  let currentPage = 1;
+  const totalPages = Math.ceil(cdCards.length / cardsPerPage);
+
+  function showPage(page) {
+    const start = (page - 1) * cardsPerPage;
+    const end = start + cardsPerPage;
+
+    cdCards.forEach((card, index) => {
+      card.style.display = (index >= start && index < end) ? "block" : "none";
+    });
+
+    pageNumberDisplay.textContent = page;
+    prevBtn.disabled = page === 1;
+    nextBtn.disabled = page === totalPages;
+  }
+
+  prevBtn.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      showPage(currentPage);
+    }
+  });
+
+  // Show first page
+  showPage(currentPage);
+
+  // If you resize the window (phone → computer), update automatically
+  window.addEventListener("resize", () => {
+    location.reload(); // simple refresh so it recalculates 8 vs 20
+  });
+});
+</script>
+
+
+  </div>
+    <div class="pagination">
+    <button id="prev-btn">Back</button>
+    <span id="page-number">1</span>
+    <button id="next-btn">Next</button>
+  </div>
+</div>
+
+</main>
+
+  </div> <!-- end layout-row -->
+<footer class="site-footer">
+
+  </footer>  
+
+</div> <!-- end container -->
+
+<script>
+// MOBILE ONLY: Exactly 8 CDs per page (2×4), new page every 8 cards
+if (window.innerWidth <= 880) {
+  const cards = document.querySelectorAll('.cd-card');
+  cards.forEach((card, index) => {
+    // Show ALL cards (override any "display:none" from old script)
+    card.style.display = 'block';
+    
+    // Every 9th card (index 8, 16, 24...) starts a new full screen page
+    if (index > 0 && index % 8 === 0) {
+      card.style.marginTop = '100vh';  // This forces a new page
+    }
+  });
+
+  // Hide the old "Back / Next" buttons on mobile — we don't need them anymore
+  document.querySelector('.pagination')?.style = 'display:none';}
+</script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krow's Nest / Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/krowicon.png" type="image/png">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER INSIDE THE CONTAINER -->
+    <header class="site-header">
+      <h1>Krow's Nest</h1>
+    </header>
+
+    <!-- SIDEBAR + MAIN BELOW HEADER -->
+    <div class="layout-row">
+
+<aside class="side-nav">
+  <!-- Clickable toggle that only shows on mobile -->
+  <h2 class="menu-toggle">MENU..</h2>
+  
+  <!-- Wrap the actual nav in a div we can hide/show -->
+  <div class="nav-wrapper">
+    <nav>
+      <a href="#" class="jump-link">home</a>
+      <a href="concerts.html" class="jump-link">concerts</a>
+      <a href="cds.html" class="jump-link">collection</a>
+      <a href="art.html" class="jump-link">artwork</a>
+      <a href="logs.html" class="jump-link">logs</a>
+    </nav>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.jump-link').forEach(link => {
+    const letters = link.textContent.split('');
+    link.innerHTML = letters.map((char, i) =>
+      `<span style="animation-delay:${i * 0.1}s">${char}</span>` // staggered delay
+    ).join('');
+  });
+});
+</script> 
+
+<script>
+// Mobile menu toggle — FIXED VERSION
+const menuToggle = document.querySelector('.menu-toggle');
+const navWrapper = document.querySelector('.nav-wrapper');
+
+if (menuToggle && navWrapper) {
+  menuToggle.addEventListener('click', () => {
+    navWrapper.classList.toggle('open');
+  });
+}
+</script>
+
+<script>
+function playEyesSound() {
+  const audio = new Audio('audio/blink.mp3');  // or 'sounds/eyes-sound.mp3'
+  audio.currentTime = 0;
+  audio.play().catch(() => {});  // works even on mobile after first tap
+}
+</script>
+
+</aside>
+
+      <main>
+
+        <section class="info-section">
+  <div class="info-container">
+<div class="info-image">
+  <img src="images/EYES.png" 
+       alt="Eyes" 
+       class="clickable-eyes"
+       onclick="playEyesSound()"
+       style="cursor:pointer;">
+</div>
+    <div class="info-text">
+         <p>Hi! Thanks for visiting my site! I built it so people can get to know me without putting in any effort!! 
+        <br>I'm a huge nerd (if u couldnt tell by this stupid website) and I'm big into music (if u also couldnt tell).
+        <br> If u want to check out the playlist below, u can get a taste of what I like.
+<br> <br>
+
+
+          I play lots of games (friend me on steam pls) on my epic PC. I just finished building my new one 
+      <br> (it has a RTX 5070 Ti yay) and I'm hoping it can maybe run roblox idk. 
+<br> <br>
+
+
+        Big fan of youtube as well (TV is dead) and spend most of my time bedrotting while watching my favs. 
+        <br>The list includes: Meatcanyon, Markiplier, Wendigoon, Moistcritical, and Oneyplays. (looooser)
+      </p>
+
+    </div>
+  </div>
+</section>
+
+        <section class="playlist-card">
+          <div class="playlist-embed">
+            <h3>Sweet Musical Treats </h3>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4R2otbxmNM56HdJrozRcBz?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="playlist-info">
+            <h3>Get At Me / Socials</h3>
+            <br>
+            <br>
+<a href="https://linktr.ee/mortifaeria" 
+   target="_blank" 
+   class="shake-link"
+   onclick="handleGetAtMeClick(event, this)">
+  <img src="images/GETATME.png" alt="Get At Me" class="shake-img">
+</a>
+
+<script>
+function handleGetAtMeClick(event, link) {
+  const img = link.querySelector('.shake-img');
+  const audio = document.getElementById('scream-sound');
+
+  // Play the scream
+  audio.currentTime = 0;
+  audio.play().catch(() => {});  // ignore if user hasn’t interacted yet
+
+  // Mobile: shake + delay before redirect
+  if (window.innerWidth <= 880) {
+    event.preventDefault();
+
+    img.style.animation = 'none';
+    requestAnimationFrame(() => {
+      img.style.animation = 'shake 0.75s ease-out';
+    });
+
+    setTimeout(() => {
+      window.open(link.href, '_blank');
+    }, 780);
+  }
+  // Desktop: instant redirect (hover still shakes from CSS)
+}
+</script>
+
+          </div>
+        </section>
+
+        <section class="three-boxes">
+          <div class="box">
+
+            <h3>Likes</h3>
+            <p>Music</p>
+            <p>Bass Guitar</p>
+            <p>Jellyfish</p>
+            <p>Kirkification</p>
+            <p>Nerds</p>
+            <p>Women</p>
+
+          </div>
+          <div class="box"><img src="images/nurse.gif" alt="Logo" class="shake-img" width="60%" height="80%"></div>
+
+          <div class="box">
+            <h3>Dislikes</h3>
+            <p>Helen Keller</p>
+            <p>AI</p>
+            <p>TransLink</p>
+            <p>ICBC</p>
+            <p>Dave Mustaine</p>
+            <p>Venetian Blinds</p>
+        </div>
+
+
+
+        </section>
+
+        <footer class="site-footer">
+        
+        </footer>
+      </main>
+
+    </div> <!-- end layout-row -->
+
+  </div> <!-- end container -->
+
+  <audio id="scream-sound" preload="auto">
+  <source src="audio/ghost.mp3" type="audio/mpeg">
+  Your browser doesn’t support audio 
+
+</audio>
+</body>
+</html>
